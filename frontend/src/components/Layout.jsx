@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Activity, BarChart3, Crosshair, Globe, Heart, Settings, Shield } from 'lucide-react';
+import { Activity, BarChart3, Crosshair, Globe, Heart, Settings, Shield, Search } from 'lucide-react';
 import { getHealth } from '../lib/api';
 import { formatNumber } from '../lib/format';
 
@@ -9,6 +9,7 @@ const NAV_ITEMS = [
   { id: 'intel', label: 'Threat Intel', icon: Shield },
   { id: 'hunt', label: 'Threat Hunt', icon: Crosshair, badge: 'BETA' },
   { id: 'live', label: 'Live Stream', icon: Activity },
+  { id: 'search', label: 'Search', icon: Search },
   { id: 'settings', label: 'Settings', icon: Settings },
 ];
 

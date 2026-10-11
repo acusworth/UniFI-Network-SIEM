@@ -7,6 +7,7 @@ const Dashboard = lazy(() => import('./components/dashboard/Dashboard'));
 const LiveMap = lazy(() => import('./components/map/LiveMap'));
 const ThreatIntel = lazy(() => import('./components/intel/ThreatIntel'));
 const ThreatHunt = lazy(() => import('./components/hunt/ThreatHunt'));
+const Search = lazy(() => import('./components/logs/Search'));
 const Settings = lazy(() => import('./components/Settings'));
 
 const DEFAULT_REFRESH = 60000;
@@ -37,6 +38,7 @@ export default function App() {
           {view === 'map' && <LiveMap period={period} setPeriod={setPeriod} {...refreshProps} />}
           {view === 'intel' && <ThreatIntel period={period} setPeriod={setPeriod} {...refreshProps} />}
           {view === 'hunt' && <ThreatHunt period={period} setPeriod={setPeriod} />}
+          {view === 'search' && <Search period={period} setPeriod={setPeriod} {...refreshProps} />}
           {view === 'settings' && <Settings setRebuilding={setRebuilding} />}
         </Suspense>
       </Layout>
